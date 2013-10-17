@@ -1,0 +1,837 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'rbno2_lightregular';
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/*inicio de las fuentes*/
+
+@font-face {
+    font-family: 'rbno2_lightregular';
+    src: url('fuentes/rbno2_lightregular/rbno2light-webfont.eot');
+    src: url('fuentes/rbno2_lightregular/rbno2light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fuentes/rbno2_lightregular/rbno2light-webfont.woff') format('woff'),
+         url('fuentes/rbno2_lightregular/rbno2light-webfont.ttf') format('truetype'),
+         url('fuentes/rbno2_lightregular/rbno2light-webfont.svg#rbno2_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'honey_scriptlight';
+    src: url('fuentes/honey_scriptlight/honeyscript-light-webfont.eot');
+    src: url('fuentes/honey_scriptlight/honeyscript-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fuentes/honey_scriptlight/honeyscript-light-webfont.woff') format('woff'),
+         url('fuentes/honey_scriptlight/honeyscript-light-webfont.ttf') format('truetype'),
+         url('fuentes/honey_scriptlight/honeyscript-light-webfont.svg#honey_scriptlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*fin de las fuentes*/
+
+/*pagina web @samuelio*/
+
+.logo{
+    font-family: 'honey_scriptlight';
+    color: #fff;
+    font-size: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/*inicio estilos para el diseño movil 480px e inferior*/
+
+.pantalla{
+    width: 100%;
+    height: 100%;
+    background: url("../img/fondo.jpg");
+    background-size: 100% 100%;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    margin: auto;
+    max-width: 480px;
+    
+}
+
+.header_arriba{
+    display: block;
+    width: 85%;
+    padding: 0px;
+    margin: auto;
+}
+
+.logo
+{
+    width: 60%;
+    height: 110px;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    display: inline-block;
+    max-width: 200px;
+    position: relative;
+    top: -50px;
+    text-shadow: 1px 2px 3px #1C1C1C;
+    filter: dropshadow(color=#1C1C1C, offx=1, offy=2);
+    }
+
+.user{
+    width: 37%;
+    max-width: 100px;
+    display: inline-block;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    top: 25px;
+    
+}
+
+.user figure{
+    margin: auto;
+    display: block;
+    width: 100px;
+}
+
+.user figure img{
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    transition-duration: 1s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+
+.user figure img:hover{
+    border: 3px solid #086A87;
+}
+
+.user figcaption{
+    text-align: center;
+}
+
+.user .ajustes{
+    
+    text-align: center;
+}
+
+header > nav {
+    display: block;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    top:10px;
+    }
+
+ul.slimmenu.collapsed{
+    padding:0;
+    height:55px;
+
+   
+}
+
+ul.slimmenu li .sub-collapser > i {
+    color: #fff;
+    
+}
+
+ul.slimmenu.collapsed li {
+    display: block;
+    width: 100%;
+    height:50px;
+    z-index: 1;
+    background:rgba(0,0,0,0.8);
+    top:10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+ul.slimmenu.collapsed li:hover{
+    height:50px;
+    background:rgba(0,0,0,1);
+}
+
+
+ul.slimmenu.collapsed li a {
+    display: block;
+    /*border-bottom: 1px solid rgba(0, 0, 0, 0.075);*/
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size:1.5em;
+    height:50px;
+    padding-top:10px;
+    color:#fff;
+}
+
+ul.slimmenu.collapsed li a:hover{
+    color:#fff;
+}
+ul.slimmenu.collapsed li .sub-collapser {
+    height: 40px;
+}
+ul.slimmenu.collapsed li > ul {
+    display: none;
+    position: static;
+}
+
+ul.slimmenu.collapsed li > ul > li{
+    
+    height:50px;
+    z-index: 9999;
+    display:block;
+}
+
+section{
+    width: 100%;
+    margin: auto;
+    height: 325px;
+    position: relative;
+    top:10px;
+
+}
+
+section > .envivo{
+    background: rgba(0,0,0,0.8);
+    width: 80%;
+    margin: 10px auto;
+    height: 230px;
+    display: block;
+    padding: 30px;
+    color: #fff;
+}
+
+section > .envivo .controles{
+    background: url("../img/controles_reproductor.png");
+    display: block;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 20px;
+    margin: 20px auto 0px auto;
+    max-width: 576px;
+}
+
+section > .chat{
+    display:none;
+}
+
+footer{
+   width: 100%;
+   height: 30px; 
+   text-align: center;
+   color: #fff;
+}
+
+/*fin estilos para el diseño movil 480px e inferior*/
+
+/******************************************************************************************************/
+/*inicio estilos para la tableta 481px hasta un maximo de 800px*/
+@media only screen and (min-width:481px ){
+ 
+header{
+        max-width: 752px;
+        
+      }
+
+.header_arriba{
+    width: 95%;
+   }
+
+.logo
+{
+    width: 55%;
+    margin-left: 20px;
+    max-width: 400px;
+    position: relative;
+    top: -30px;
+    font-size: 6em;
+    text-align: left;
+ }
+
+.user{
+        width: 28%;
+        max-width: 300px;
+        display: inline-block;
+        margin: auto;
+        position: relative;
+        top: 15px;
+      }
+
+.user .ajustes{
+    display:block;
+    text-align: center;
+    width:30px;
+    height:60px;
+    position: absolute;
+    right:-20px;
+    top:30px;
+
+}
+
+.user .ajustes img{
+    display:block;
+    margin-bottom: 10px;
+
+}
+
+.user > figcaption > strong,
+.user > figcaption > small{
+    display:block;
+    font-size: 1.2em;
+    }
+
+.user > figcaption > small{
+    font-size: 1em;
+}
+header > nav {
+    width: 80%;
+    text-align: center;
+    }
+
+/*header > nav ul li{
+    background: rgba(255,255,255,0.7);
+    width: 45%;
+    }
+header > nav ul li a{
+                      font-size: 1.5em;
+                    }
+*/
+section{
+    width: 90%;
+}
+
+section > .envivo{
+    
+    width: 85%;
+    font-size: 1.4em;
+    text-align: justify;
+    height:250px;
+}
+
+section > .envivo .controles{
+                               max-width: 400px;
+                             }
+
+
+
+footer{
+   width: 100%;
+   height: 28px; 
+   margin-top: 20px;
+   
+}
+
+    
+}
+
+/*fin estilos para la tableta 481px hasta un maximo de 800px*/
+
+/******************************************************************************************************/
+
+
+/******************************************************************************************************/
+
+/*inicio estilos para escritorio de 801px hasta un maximo de 1232px*/
+
+@media only screen and (min-width: 801px){
+
+header{
+        max-width: 1280px;
+      }
+
+.logo
+{
+    width: 65%;
+    max-width: 100%;
+    font-size: 7em;
+    margin-left: 5%;
+}
+
+.user{
+        width: 20%;
+        max-width: 100%;
+        top:10px;
+    }
+
+header > nav {
+    background:rgba(255,255,255,0.3);
+
+    max-width: 100%;
+    width:100%;
+    height:55px;
+
+}
+
+/*header > nav > ul{
+    padding:5px 0px;
+}
+
+header > nav ul li{
+    background: rgba(255,255,255,0.0);
+    border-right: 1px solid #000;
+    width: 22%;
+    
+}
+
+header > nav ul li:hover{
+    background: rgba(255,255,255,0.3);
+    height:30px;
+}
+
+
+header > nav ul li a{
+ color: rgba(0,0,0,0.7);
+font-size: 1.8em;
+
+
+}*/
+
+section{
+   height: 360px;
+
+}
+
+section > .envivo{
+    
+    width: 95%;
+    font-size: 1.6em;
+    height:250px;
+    margin-top: 40px;
+    max-width: 900px;
+    
+    
+}
+
+section > .envivo .controles{
+    
+    width: 100%;
+    height: 35px;
+    max-width: 600px;
+}
+
+
+
+footer{
+   font-size: 1em;
+   
+}
+
+    
+}
+
+/*fin estilos para escritorio de 801px hasta un maximo de 1232*/
+
+/******************************************************************************************************/
+/*inicio estilos para escritorio de 1233px hasta un maximo de 1600*/
+@media only screen and (min-width: 1024px){ 
+
+section{
+    height:400px;
+}
+
+section > .envivo{
+    
+    width: 60%;
+    font-size: 1.6em;
+    height:250px;
+    margin-top: 40px;
+    max-width: 100%;
+    float:left;
+    
+    
+}
+
+section > .envivo .controles{
+   width: 100%;
+    height: 35px;
+    max-width: 600px;
+}
+section > .chat{
+    display:block;
+    background:rgba(0,0,0,0.8);
+    height:330px;
+    width:33%;
+    max-width: 305px;
+    float:right;
+    position: relative;
+    top:40px;
+    overflow:hidden;
+}
+
+.chat > .title_chat{
+    font-size: 2em;
+    text-align: center;
+    width:305px;
+    display:block;
+    color:#fff;
+}
+.chat > .caja_texto{
+    display:block;
+    width:283px;
+    height:35px;
+    background:rgba(255,255,255,0.2);
+    padding:10px;
+    color:#fff;
+    margin: 5px 0px;
+    text-align: justify;
+}
+.chat > .caja_texto:hover{
+    background:rgba(255,255,255,1);
+    color:#000;
+}
+    
+}
+ /*fin de estilos para escritorio con chat*/
+
+
+
+/*inicio estilos para escritorio de 1233px hasta un maximo de 1600*/
+
+@media only screen and (min-width: 1233px){ 
+.contenedor{
+    width: 90%;
+            }
+  .logo{
+    margin-left: 8%;
+    width:62%;
+  }
+
+   header > nav{
+        width:100%;
+        position: absolute;
+        left:0;
+        top:160px;
+   }
+
+   header > nav > ul{
+    
+    top:-15px;
+    position: relative;
+   }
+
+   /*header > nav > ul > li{
+    
+    height:30px;
+   }
+
+   header > nav > ul > li > a{
+    font-size: 2.5em;
+    position: relative;
+    top:-10px;
+   }
+*/
+   section{
+    margin-top: 100px;
+    /*max-width: 800px*/
+   }
+
+   section > .envivo{
+    height:270px;
+    }
+
+}
+
+/* fin de estilos para escritorio de 1233px hasta un maximo de 1600px*/
+
+/*inicio estilos para superior 1601 hasta superior tv y demas*/
+
+@media only screen and (min-width: 1601px){
+    
+   
+}
+    
+/*fin estilos para superior 1601 hasta superior tv y demas*/
+
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
